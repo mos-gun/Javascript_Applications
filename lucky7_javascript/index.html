@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>Lucky7</title>
+        <link rel="stylesheet" href="style.css">
+
+
+        <script type="text/javascript">
+
+            let randomNumber1 = 0;
+            let randomNumber2 = 0;
+            let randomNumber3 = 0;
+            let ammountOfCoins = 0;
+            let ammountOfAttempts = 0;
+
+
+            function spinSlots(imgCoin,imgPirate,imgSeven) {
+                randomNumber1 = getRandomIntInclusive(0,7);
+                randomNumber2 = getRandomIntInclusive(0,7);
+                randomNumber3 = getRandomIntInclusive(0,7);
+
+                // change slot images
+                if(randomNumber1 == 0) document.getElementById("slot1").src=imgPirate;
+                else 
+                    if(randomNumber1 == 7) document.getElementById("slot1").src=imgSeven;
+                else
+                    document.getElementById("slot1").src=imgCoin;
+
+                if(randomNumber2 == 0) document.getElementById("slot2").src=imgPirate;
+                else 
+                    if(randomNumber2 == 7) document.getElementById("slot2").src=imgSeven;
+                else
+                    document.getElementById("slot2").src=imgCoin;
+
+                if(randomNumber3 == 0) document.getElementById("slot3").src=imgPirate;
+                else 
+                    if(randomNumber3 == 7) document.getElementById("slot3").src=imgSeven;
+                else
+                    document.getElementById("slot3").src=imgCoin;
+
+                // check if game resets/ends/continues
+                ammountOfAttempts++;
+
+                if(randomNumber1 + randomNumber2 + randomNumber3 == 0){
+                    ammountOfCoins = 0;
+                    resetData();
+                } else
+                    if(randomNumber1 + randomNumber2 + randomNumber3 == 21){
+                        alert("Lucky7!\nCongratulations, you won " + ammountOfCoins + " with " + ammountOfAttempts + " attempts!");
+                        ammountOfAttempts = 0;
+                        ammountOfCoins = 0;
+                        updateData();
+                    } else{
+                        if(randomNumber1 != 0 && randomNumber1 != 7) ammountOfCoins += randomNumber1;
+                        if(randomNumber2 != 0 && randomNumber2 != 7) ammountOfCoins += randomNumber2;
+                        if(randomNumber3 != 0 && randomNumber3 != 7) ammountOfCoins += randomNumber3;
+                        updateData();
+                    }
+            }
+
+            function updateData(){
+                document.getElementById("idAmmountOfCoins").textContent = "Coins: " + ammountOfCoins;
+                document.getElementById("idAmmountOfAttempts").textContent = "Attempts: " + ammountOfAttempts;
+
+                if(randomNumber1 == 7)
+                    document.getElementById("idRandomNumber1").textContent = "+ 0";
+                else
+                    document.getElementById("idRandomNumber1").textContent = "+ " + randomNumber1;
+
+                if(randomNumber2 == 7)
+                    document.getElementById("idRandomNumber2").textContent = "+ 0";
+                else
+                    document.getElementById("idRandomNumber2").textContent = "+ " + randomNumber2;
+
+                if(randomNumber3 == 7)
+                    document.getElementById("idRandomNumber3").textContent = "+ 0";
+                else
+                    document.getElementById("idRandomNumber3").textContent = "+ " + randomNumber3;
+
+            }
+
+            function resetData(){
+                ammountOfAttempts = 0;
+                ammountOfCoins = 0;
+                updateData();
+            }
+
+            // from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+            function getRandomIntInclusive(min, max) {                  
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min; 
+                //The maximum is inclusive and the minimum is inclusive 
+            }
+
+        </script>
+
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Enable Dark Mode!</em>
+        </div>
+
+
+    </head>
+
+    <body>
+
+
+
+
+        <div> <h1>Lucky7!</h1> </div>
+
+
+        <div style="position: relative">
+            <img id="slot1" src="res/slot_coin.png" alt="Slot 1" class="imgSlot1">
+            <img id ="slot2" src="res/slot_pirate.png" alt="Slot 2" class="imgSlot2">
+            <img id ="slot3" src="res/slot_seven.png" alt="Slot 3" class="imgSlot3">
+        </div>
+
+
+        <a class="btnSpin" href="#" onclick='spinSlots("res/slot_coin.png","res/slot_pirate.png","res/slot_seven.png")'>Spin</a>
+
+        <a class="btnReset" href="#" onclick='resetData()'>Reset</a>
+
+
+        <div>
+            <p id="idAmmountOfCoins" class="coins">Coins: <span id="ammountOfCoins">.</span></p>
+            <p id="idAmmountOfAttempts" class="attempts">Attempts: <span id="ammountOfAttempts">.</span></p>
+
+            <script type="text/javascript">
+                document.getElementById("ammountOfCoins").textContent = ammountOfCoins;
+                document.getElementById("ammountOfAttempts").textContent = ammountOfAttempts;
+            </script>
+        </div>
+
+
+        <div>
+            <p id="idRandomNumber1" class="randomNumber1"><span id="idRandomNumber1">+ 0</span></p>
+            <p id="idRandomNumber2" class="randomNumber2"><span id="idRandomNumber2">+ 0</span></p>
+            <p id="idRandomNumber3" class="randomNumber3"><span id="idRandomNumber3">+ 0</span></p>
+        </div>
+
+
+        <script type="text/javascript">
+            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+            function switchTheme(e) {
+                if (e.target.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+                else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }    
+            }
+            toggleSwitch.addEventListener('change', switchTheme, false);
+        </script>
+
+    </body>
+</html>

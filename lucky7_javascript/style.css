@@ -1,0 +1,275 @@
+/*  LIGHT/DARK MODE BUTTON  */
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}
+
+
+.theme-switch-wrapper {
+    position: absolute;
+    left: 50;
+    top: 50;
+    display: flex;
+    align-items: center;
+
+    em {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+}
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*==============================*/
+/*==============================*/
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+h1 {
+    position: absolute;
+    left: 605;
+    color: var(--secondary-color);
+    font-size: 3em;
+    align-content: center
+}
+
+/*==============================*/
+
+.imgSlot1 {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:160;
+    left: 350;
+}
+
+.imgSlot2 {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:160;
+    left: 600;
+}
+
+.imgSlot3 {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:160;
+    left: 850;
+}
+
+/*==============================*/
+
+
+/* BUTTONS GENERATED WITH
+buttonoptimizer.com
+*/
+
+.btnSpin {
+    position: absolute;
+    top: 400;
+    left: 900;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 14px 26px;
+    border: 1px solid #269721;
+    border-radius: 8px;
+    background: #3ef635;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3ef635), to(#269721));
+    background: -moz-linear-gradient(top, #3ef635, #269721);
+    background: linear-gradient(to bottom, #3ef635, #269721);
+    -webkit-box-shadow: #3ae331 0px 0px 80px 0px;
+    -moz-box-shadow: #3ae331 0px 0px 80px 0px;
+    box-shadow: #3ae331 0px 0px 80px 0px;
+    text-shadow: #185f15 1px 1px 1px;
+    font: normal normal bold 25px tahoma;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.btnSpin:hover {
+    border: 1px solid ##30bd29;
+    background: #4aff40;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4aff40), to(#2eb528));
+    background: -moz-linear-gradient(top, #4aff40, #2eb528);
+    background: linear-gradient(to bottom, #4aff40, #2eb528);
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.btnSpin:active {
+    background: #269721;
+    background: -webkit-gradient(linear, left top, left bottom, from(#269721), to(#269721));
+    background: -moz-linear-gradient(top, #269721, #269721);
+    background: linear-gradient(to bottom, #269721, #269721);
+    text-transform: uppercase
+}
+.btnSpin:focus {
+    text-transform: uppercase
+}
+
+/*==============================*/
+
+.btnReset {
+    position: absolute;
+    top: 400;
+    left: 635;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 14px 26px;
+    border: 1px solid #022b9f;
+    border-radius: 8px;
+    background: #0578ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0578ff), to(#022b9f));
+    background: -moz-linear-gradient(top, #0578ff, #022b9f);
+    background: linear-gradient(to bottom, #0578ff, #022b9f);
+    -webkit-box-shadow: #0690ff 0px 0px 60px 0px;
+    -moz-box-shadow: #0690ff 0px 0px 60px 0px;
+    box-shadow: #0690ff 0px 0px 60px 0px;
+    text-shadow: #011859 1px 1px 1px;
+    font: normal normal bold 25px tahoma;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.btnReset:hover {
+    border: 1px solid ##0230b1;
+    background: #0690ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0690ff), to(#0234bf));
+    background: -moz-linear-gradient(top, #0690ff, #0234bf);
+    background: linear-gradient(to bottom, #0690ff, #0234bf);
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.btnReset:active {
+    background: #022b9f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#022b9f), to(#022b9f));
+    background: -moz-linear-gradient(top, #022b9f, #022b9f);
+    background: linear-gradient(to bottom, #022b9f, #022b9f);
+    text-transform: uppercase
+}
+.btnReset:focus {
+    text-transform: uppercase
+}
+
+/*==============================*/
+
+.coins {
+    position: absolute;
+    top: 400;
+    left: 350;
+    font-size: 1.2em;
+}
+
+.attempts {
+    position: absolute;
+    top: 420;
+    left: 350;
+    font-size: 1.2em;
+}
+
+/*==============================*/
+
+.randomNumber1 {
+    position: absolute;
+    top: 320;
+    left: 425;
+    font-size: 1.2em;
+}
+
+.randomNumber2 {
+    position: absolute;
+    top: 320;
+    left: 675;
+    font-size: 1.2em;
+
+}
+
+.randomNumber3 {
+    position: absolute;
+    top: 320;
+    left: 925;
+    font-size: 1.2em;
+
+}
+
+
+/*=====================================*/
+
