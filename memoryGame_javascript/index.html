@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset="urf-8">
+
+    <head>
+        <title>Memory game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-latest.js"></script>  
+
+        <script>
+            let arrPos = [0,1,2,3,4,5,6,7,8,9,10,11];
+            let arrRandom = [];
+            let randomNum;
+            let pos;
+            let numOfAttempts = 0;
+            let numOfPairsFound = 0;
+
+            for(let i=0; i<12; i++){
+                randomNum = Math.floor(Math.random() * arrPos.length);
+                pos = arrPos.splice(randomNum, 1);
+                arrRandom.push(pos[0]);
+            }
+
+            let arrCards = ["football", "basketball", "baseball", "tennisball", "american_football", "volleyball"];
+            let arrPairs = [];
+            let firstCard;
+            let firstCardIsSelected = false;
+
+            function turnCard(num){
+                $('#idCard'+num).attr({src: "res/"+$('#idCard'+num).attr("alt")+".png"});
+            }
+
+            function turnBack(num){
+                setTimeout(function(){
+                    $('#idCard'+num).attr({src: "res/question_mark.png"});                    
+                }, 1000);
+            }
+
+            function markAsFound(card1, card2){
+                $('#idCard'+card1).off('click');
+                $('#idCard'+card2).off('click');
+            }
+
+            function updateData(){
+                document.getElementById("idAttempts").textContent = "Attempts: " + numOfAttempts;
+                document.getElementById("idPairsFound").textContent = "Pairs found: " + numOfPairsFound;
+            }
+
+            function endGame(){
+                alert("Congratulations! You found all pairs with " + numOfAttempts + " attempts!");
+            }
+
+            //jQuery function
+            $(document).ready(function(){                                   // '$' instead of 'jQuery'
+                for(let i=0, j=0; i<6; i++, j+=2){
+                    $('#idCard'+arrRandom[j]).attr({alt: arrCards[i]});
+                    $('#idCard'+arrRandom[j+1]).attr({alt: arrCards[i]});
+                    arrPairs[arrRandom[j]] = arrRandom[j+1];
+                    arrPairs[arrRandom[j+1]] = arrRandom[j];
+                }
+
+
+                let localNum;
+
+                $('#idCard0').click(function(){
+                    localNum = 0;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard1').click(function(){
+                    localNum = 1;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard2').click(function(){
+                    localNum = 2;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard3').click(function(){
+                    localNum = 3;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard4').click(function(){
+                    localNum = 4;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();            
+                })
+
+                $('#idCard5').click(function(){
+                    localNum = 5;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard6').click(function(){
+                    localNum = 6;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard7').click(function(){
+                    localNum = 7;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard8').click(function(){
+                    localNum = 8;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard9').click(function(){
+                    localNum = 9;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard10').click(function(){
+                    localNum = 10;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+                $('#idCard11').click(function(){
+                    localNum = 11;
+                    console.log("card"+localNum+" clicked!");
+
+                    if(firstCardIsSelected){
+                        if(firstCard != localNum){
+                            turnCard(localNum);
+                            numOfAttempts++;
+                            if(firstCard == arrPairs[localNum]){
+                                console.log("PAIR FOUND");
+                                numOfPairsFound++;
+                                markAsFound(firstCard, localNum);
+                                firstCardIsSelected = false;
+                            }
+                            else{
+                                console.log(firstCard + " and " + localNum + " not a pair");
+                                turnBack(localNum);
+                                turnBack(firstCard);
+                                firstCardIsSelected = false;
+                            }
+
+                        } else console.log("This card is already selected!");
+                    } else{
+                        turnCard(localNum);
+                        firstCard = localNum;
+                        firstCardIsSelected = true;
+                    }
+                    updateData();
+                    if(numOfPairsFound == 6) endGame();
+                })
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Memory</h1>
+
+        <div class="container">
+            <div><img id="idCard0" src="res/question_mark.png"></div>
+            <div><img id="idCard1" src="res/question_mark.png"></div>
+            <div><img id="idCard2" src="res/question_mark.png"></div>
+            <div><img id="idCard3" src="res/question_mark.png"></div>
+            <div><img id="idCard4" src="res/question_mark.png"></div>
+            <div><img id="idCard5" src="res/question_mark.png"></div>
+            <div><img id="idCard6" src="res/question_mark.png"></div>
+            <div><img id="idCard7" src="res/question_mark.png"></div>
+            <div><img id="idCard8" src="res/question_mark.png"></div>
+            <div><img id="idCard9" src="res/question_mark.png"></div>
+            <div><img id="idCard10" src="res/question_mark.png"></div>
+            <div><img id="idCard11" src="res/question_mark.png"></div>
+        </div>
+
+        <div>
+            <p id="idAttempts" class="attempts">Attempts: <span id="attempts">.</span></p>
+            <p id="idPairsFound" class="pairsFound">Pairs found: <span id="pairsFound">.</span></p>
+
+            <script type="text/javascript">
+                document.getElementById("attempts").textContent = numOfAttempts;
+                document.getElementById("pairsFound").textContent = numOfPairsFound;
+            </script>
+        </div>
+
+    </body>
+</html>

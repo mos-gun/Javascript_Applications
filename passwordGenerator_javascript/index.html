@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset="urf-8">
+
+    <head>
+        
+        <script>
+            function show_prompt(){
+                let firstName = "";
+                let lastName = "";
+                let randomNumber;
+                let numOfLetters;
+                let password = "";
+
+                firstName = prompt("First name:", "");
+                lastName = prompt("Last name:", "");
+                randomNumber = getRandomIntInclusive(1,99);
+                numOfLetters = firstName.length + lastName.length;
+                password = (firstName.substring(0,2)) + randomNumber + lastName.substring(lastName.length-2) + numOfLetters;
+                
+                alert("Password: " + password);
+            }
+
+            // from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+            function getRandomIntInclusive(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min; 
+                //The maximum is inclusive and the minimum is inclusive 
+            }
+        </script>
+        
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            show_prompt();
+        </script>
+    </body>
+</html>
