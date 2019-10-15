@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/background.jpg) aquamarine;
+}
+
+* {
+    font-family: font-family: 'Trocchi', serif;
+    font-weight: normal;
+

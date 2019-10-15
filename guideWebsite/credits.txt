@@ -1,0 +1,24 @@
+website logo:
+self-made / generated
+
+website background:
+https://get.pxhere.com/photo/light-sunlight-atmosphere-line-blue-aurora-lens-flare-background-backgrounds-computer-wallpaper-831155.jpg
+
+arrows:
+https://commons.wikimedia.org/wiki/File:White_Arrow_Down.svg
+https://commons.wikimedia.org/wiki/File:White_Arrow_Up.svg
+
+navigation bar responsiveness (partly):
+https://webdevtrick.com/css-responsive-navbar/
+
+generated url for google map (only url, not code):
+https://www.embedgooglemap.net/
+
+tutorial: embed google maps feature
+https://www.labnol.org/internet/embed-responsive-google-maps/28333/
+
+generated grid for contact webpage:
+https://vue-grid-generator.netlify.com/
+
+blurry overlay (/guides):
+https://codeconvey.com/css-fullscreen-overlay-blur-background/
