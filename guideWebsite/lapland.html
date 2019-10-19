@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <title>Lapland</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/navigationBar.css">
-        
-        <script src="https://code.jquery.com/jquery-latest.js"></script>
-        
-        <script type="text/javascript">
-            
-        </script>
+        <link rel="stylesheet" type="text/css" href="css/modal-image.css">
+        <link rel="stylesheet" type="text/css" href="css/lapland.css">
 
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
     </head>
 
 
     <body>
-
+        <!-- ============================== Navigation bar ============================== -->
         <section class="nav-bar">
             <div class="nav-container">
                 <div class="brand">
@@ -67,12 +65,183 @@
                 }); 
             })(jQuery);
         </script>
-        
-        
-        <h1 style="font-size: 10vw">Lapland</h1>
-        
-        
+        <!-- ============================== Navigation bar ============================== -->
 
+        <div class="container">
+            <div class="padding-left">padding-left</div>
+            <div class="padding-top">padding-top</div>
+            <div class="padding-right">padding-right</div>
+            <div class="header">
+                <h1>Lapland</h1>
+            </div>
+            <div class="sub-header">
+                <h2>Come visit us!</h2>
+                <h2>________________________________</h2>
+                <h3>hidden-text</h3>
+            </div>
+            <div class="main-first-section">
+                <div class="head-image">
+                    <img src="img/photo_gallary/lapland_head-image.jpg">
+                </div>
+                <h3>hidden-text</h3>
+                <p class="main-section-header">The most beautiful place on earth!</p>
+                <p class="main-section-text">Lapland casts a powerful spell: there's something lonely and intangible here that fills it with Arctic magic. The midnight sun, the Sámi peoples, the aurora borealis (Northern Lights) and roaming reindeer are all components of this – as is Santa Claus himself, who ‘officially’ resides here – along with the awesome latitudes: at Nuorgam, the northernmost point, you have passed Iceland and nearly all of Canada and Alaska.</p>
+                <p class="main-section-text">Spanning 30% of Finland’s land area, Lapland is home to just 3% of its population. Its vast wilderness is ripe for exploring on foot, skis or sled. The sense of space, pure air and big skies are what's most memorable here, more so than the towns.</p>
+                <p class="main-section-text">Lapland’s far north is known as Sápmi, home of the Sámi, whose main communities are around Inari, Utsjoki and Hetta. Rovaniemi, on the Arctic Circle, is the most popular gateway to the north.</p>
+                <h3>hidden-text</h3>
+            </div>
+            <div class="main-second-section">
+
+                <!-- ========== Image grid layout (adapted from source (credit in credits.txt)) ========== -->
+                <section id="photos"></section>
+
+                <script type="text/javascript">
+                    var allImages = "";
+
+                    for(var i=1; i<=16; i++) {
+                        $('#photos').append("<img id='lapland_"+i+"' src='img/photo_gallary/lapland_"+i+".jpg' alt='Lapland "+i+"'>");
+                    }
+                </script>
+                <!-- ========== Image grid layout (adapted from source (credit in credits.txt)) ========== -->
+
+                <!-- =============== Modal for images (adapted from source (credit in credits.txt)) =============== -->
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div> 
+
+                <script type="text/javascript">
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the image and insert it inside the modal - use its "alt" text as a caption
+                    let img1 = document.getElementById("lapland_1");
+                    let img2 = document.getElementById("lapland_2");
+                    let img3 = document.getElementById("lapland_3");
+                    let img4 = document.getElementById("lapland_4");
+                    let img5 = document.getElementById("lapland_5");
+                    let img6 = document.getElementById("lapland_6");
+                    let img7 = document.getElementById("lapland_7");
+                    let img8 = document.getElementById("lapland_8");
+                    let img9 = document.getElementById("lapland_9");
+                    let img10 = document.getElementById("lapland_10");
+                    let img11 = document.getElementById("lapland_11");
+                    let img12 = document.getElementById("lapland_12");
+                    let img13 = document.getElementById("lapland_13");
+                    let img14 = document.getElementById("lapland_14");
+                    let img15 = document.getElementById("lapland_15");
+                    let img16 = document.getElementById("lapland_16");
+
+                    var modalImg = document.getElementById("img01");
+                    var captionText = document.getElementById("caption");
+                    img1.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img2.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img3.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img4.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img5.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img6.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img7.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img8.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img9.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img10.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img11.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img12.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img13.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img14.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img15.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                    img16.onclick = function(){
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    } 
+                </script>
+                <!-- =============== Modal for images (adapted from source (credit in credits.txt)) =============== -->
+
+            </div>
+            <div class="padding-bottom">
+                <h3>hidden-text</h3>
+                <h3>hidden-text</h3>
+                <h3>hidden-text</h3>
+            </div>
+        </div>
     </body>
+
 
 </html>

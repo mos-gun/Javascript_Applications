@@ -1,24 +1,61 @@
 website logo:
-self-made / generated
+self-made and partly generated
 
 website background:
 https://get.pxhere.com/photo/light-sunlight-atmosphere-line-blue-aurora-lens-flare-background-backgrounds-computer-wallpaper-831155.jpg
 
-arrows:
-https://commons.wikimedia.org/wiki/File:White_Arrow_Down.svg
-https://commons.wikimedia.org/wiki/File:White_Arrow_Up.svg
-
-navigation bar responsiveness (partly):
+navigation bar responsiveness (pages: all):
 https://webdevtrick.com/css-responsive-navbar/
 
-generated url for google map (only url, not code):
+generated url for google map (only url, not code) (pages: Contact):
 https://www.embedgooglemap.net/
 
-tutorial: embed google maps feature
+tutorial: embed google maps feature (pages: Contact)
 https://www.labnol.org/internet/embed-responsive-google-maps/28333/
 
-generated grid for contact webpage:
+generated grid layout (pages: Contact, Guides):
 https://vue-grid-generator.netlify.com/
 
-blurry overlay (/guides):
+blurry overlay (pages: Guides):
 https://codeconvey.com/css-fullscreen-overlay-blur-background/
+
+photo gallery (pages: Auroras):
+https://www.quackit.com/css/
+
+photo gallery images (pages: Auroras):
+https://www.lapland.fi/uploads/2018/08/f734ea6c-aurora-hunter-excursion-lapland-visit-finland-markus-kiili-5-1440x810.jpg
+https://i2.wp.com/www.laplandthemagazine.com/wp-content/uploads/2015/09/97B0555.jpg
+http://www.fubiz.net/wp-content/uploads/2015/03/Aurora-Borealis-in-Finland_2.jpg
+http://www.mondoaeroporto.it/wp-content/uploads/2017/07/4-slide-finland-lapland-northern-lights-aurora-borealis-pano.jpg
+http://www.softservenews.com/en/aurora-borealis-breaking-news/springpics15/markuskiili2.jpg
+https://i.pinimg.com/736x/be/28/8f/be288f5b62c6283efda010c284a0a827--northen-lights-lappland.jpg
+https://upload.wikimedia.org/wikipedia/commons/0/08/Aurora_finland.jpg
+https://apod.nasa.gov/apod/image/1604/aurorakaunispaa280316_casado.jpg
+https://laplandwelcome.fi/userassets/uploads/2017/09/DSC09094-bewerkt-bewerkt-2.jpg
+https://i.pinimg.com/736x/f1/32/84/f132844741f35fddf633cbb5eb448461--northan-lights-northern-lights-finland.jpg
+
+photo gallery images (pages: Lapland):
+https://www.sering.info/2013/01/lapland-sebuah-daerah-tanpa-malam-di.html?m=0
+https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F181122092502-01-rovaniemi-finland-file-2015.jpg
+https://cdn.content.tuigroup.com/adamtui/2018_5/14_15/254ecb9d-cd33-4460-9801-a8e000fd41b0/LOC_002179_shutterstock_722256478WebOriginalCompressed.jpg?i10c=img.resize(width:1080);img.crop(width:1080,height:608)
+http://blog.goway.com/gowayagent/wp-content/uploads/2016/09/Kakslauttanen-Arctic-Resort-Glass-Igloos-Finnish-Lapland-Finland.jpg
+https://img.theculturetrip.com/768x432/wp-content/uploads/2017/09/levi_center_night.jpg
+https://data.theupsider.com.au/wp-content/uploads/2019/04/ice-restaurant31-snowvillage-Lapland-Hotels.jpg
+https://cdn.images.express.co.uk/img/dynamic/25/590x/Visit-Father-Christmas-in-Lapland-717070.jpg
+http://bildbank.skarefjall.se/cache/NaturHost/Sverige/Lappland/IMG_1877_2560.jpg
+https://www.discoveringtheplanet.com/wp-content/uploads/2018/06/Sverige-Lappland-Kiruna-6.jpg
+https://www.rantapallo.fi/wp-content/uploads/2015/09/Lappi-Porot-Ruska-Visit-Finland-Pentti-Sormunen-Vastavalo.jpg
+https://www.ich-brauche-ferien.ch/wp-content/uploads/2017/12/finnland-panorama.jpg
+https://www.solos-singlereisen.de/wp-content/uploads/2017/03/Die-Weite-Lapplands.jpg
+http://2.bp.blogspot.com/-PenGhfZhbUY/UoyKqxTP9UI/AAAAAAAALw4/OO0D5fV4kS8/s1600/a%CC%88lgarlippi.jpg
+https://2.bp.blogspot.com/-IYi84GWpl88/VlLcyy7fdzI/AAAAAAAAMTI/OiKlWXw3pvI/s1600/_H3A4617rattik.jpg
+http://www.santatelevision.com/weihnachtsmann/files/bild-weihnachtsmanndorf-rovaniemi-lappland.jpg
+https://obj.fotosidan.se/obj/docpart/10/102e8c8752e88c2e29f81269780205c7.jpg
+http://www.talk-around-the-world.com/wp-content/uploads/2014/07/52.jpg
+https://www.islandtours.ch/media/img/header/1277x700/norwegen-nordkap-lappland-lofoten-shutterstock-neu-1277.jpg
+
+modal for images responsiveness (pages: Auroras, Lapland):
+https://www.w3schools.com/css/css3_images.asp
+
+photo gallery grid responsiveness (pages: Lapland):
+https://css-tricks.com/seamless-responsive-photo-grid/

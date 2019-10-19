@@ -1,13 +1,6 @@
-h1,h2 {
-    color: white;
-    text-align: center;
-}
-h3 {
-    visibility: hidden;
-}
-
-
-
+/* =========================  ========================= */
+/* Webpage content */
+/* Structure: grid */
 .container {
     display: grid;
     width: 100%;
@@ -22,7 +15,7 @@ h3 {
     grid-template-rows: 5% 17% 8% 32.5% 32.5% 5%;
 }
 .container > div {
-    border: 1px dashed #888;
+    //    border: 1px dashed #888;
 }
 
 .padding-left {
@@ -50,33 +43,52 @@ h3 {
 .main-second-section {
     grid-area: main-second-section;
     background: black;
-    padding-top: 10%
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 .padding-bottom {
     grid-area: padding-bottom;
     background: rgba(0,0,0,0.6);
 }
 
-
-
 .main-section-header {
-    font-size: 2vw;
+    font-size: 2.2em;
     color: blueviolet;
     text-align: center;
 }
 .main-section-text {
-    font-size: 1.4vw;
+    font-size: 1.2em;
     color: darkslategray;
-
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
+.aurora_1,
+.aurora_2,
+.aurora_3,
+.aurora_4,
+.aurora_5,
+.aurora_6,
+.aurora_7,
+.aurora_8,
+.aurora_9,
+.aurora_10
+{
+    background-color: purple;
+}
+
+/* =========================  ========================= */
+/* Photo gallery layout */
+/* partly adapted from source (credit in credits.txt) */
 
 .grid { 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+    grid-gap: 6px;
     align-items: start;
     justify-items: center;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 .grid img {
     border: 1px solid rgba(0,0,0,0.3);
@@ -87,16 +99,3 @@ h3 {
     grid-column: span 3;
     grid-row: span 2;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +14,11 @@
         <script src="https://code.jquery.com/jquery-latest.js"></script>
 
         <script type="text/javascript">
-            
             $(document).ready(function(){
-
                 var elts = $('*[class*="g"]')
                 .filter(function () {
                     return this.className.match(/(?:^|\s)g/);
                 });
-
-                
-
-
-                
-
-                
-                
 
                 let guideClicked = "gX";
 
@@ -128,7 +119,6 @@
                     $(".g8-infobox h1").delay(1250).show(0);    
                 });
 
-
                 $(".overlay").click(function() {
                     var div_infobox = $("."+guideClicked+"-infobox");
                     $("."+guideClicked+"-infobox h1").hide(500);
@@ -138,17 +128,13 @@
                     $(".overlay").toggleClass("active");
                     $(elts).not("."+guideClicked).toggleClass("smaller");
                 });
-
             });
-
-
         </script>
-
     </head>
 
 
     <body>
-
+        <!-- ============================== Navigation bar ============================== -->
         <section class="nav-bar">
             <div class="nav-container">
                 <div class="brand">
@@ -196,7 +182,7 @@
                 }); 
             })(jQuery);
         </script>
-
+        <!-- ============================== Navigation bar ============================== -->
 
         <div class="container">
             <div class="padding-top">padding-top</div>
@@ -341,10 +327,8 @@
                 <h3>hidden-text</h3>
                 <h3>hidden-text</h3>
             </div>
-
         </div>
-
-
     </body>
+
 
 </html>

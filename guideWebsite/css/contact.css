@@ -1,7 +1,10 @@
+/* =========================  ========================= */
+/* Google maps frame */
+/* partly adapted from source (credit in credits.txt) */
 
 .google-maps {
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
+    padding-bottom: 75%;
     height: 0;
     overflow: hidden;
 }
@@ -13,16 +16,9 @@
     height: 90% !important;
 }
 
-
-
-h1,h2 {
-    color: white;
-    text-align: center;
-}
-h3 {
-    visibility: hidden;
-}
-
+/* =========================  ========================= */
+/* Webpage content */
+/* Structure: grid */
 
 .container {
     display: grid;
@@ -33,12 +29,12 @@ h3 {
         "padding-left header header padding-right"
         "padding-left sub-header sub-header padding-right"
         "padding-left map address padding-right"
-        "padding-buttom padding-buttom padding-buttom padding-buttom";
+        "padding-left padding-bottom padding-bottom padding-right";
     grid-template-columns: 5% 50% 40% 5%;
     grid-template-rows: 10% 17% 8% 60% 5%;
 }
 .container > div {
-    //   border: 1px dashed #888;
+    //    border: 1px dashed #888;
 }
 
 .padding-top {
@@ -59,9 +55,9 @@ h3 {
 .sub-header {
     grid-area: sub-header;
 }
-.padding-buttom {
-    grid-area: padding-buttom;
-    background: white;
+.padding-bottom {
+    grid-area: padding-bottom;
+    visibility: hidden;
 }
 
 .map {
@@ -111,7 +107,8 @@ h3 {
 
 
 
-/* MEDIA QUERIES */
+/* =========================  ========================= */
+/* Media queries */
 
 @media only screen and (max-width: 800px) {
     .map {
@@ -168,47 +165,4 @@ h3 {
         padding-top: 3%;
         margin-left: 50px;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
